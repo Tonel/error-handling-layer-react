@@ -7,7 +7,7 @@ export default function ErrorPage(props) {
             {props.resetErrorBoundary && (
                 <div>
                     <button className={"retry-button"} onClick={props.resetErrorBoundary}>
-                        🔄 Try again!
+                        🔄 Try Again!
                     </button>
                 </div>
             )}

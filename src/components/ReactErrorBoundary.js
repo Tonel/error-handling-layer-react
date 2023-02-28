@@ -1,4 +1,3 @@
-import React from "react";
 import ErrorPage from "./ErrorPage";
 import { ErrorBoundary } from "react-error-boundary";
 export default function ReactErrorBoundary(props) {

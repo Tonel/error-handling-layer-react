@@ -36,6 +36,7 @@ export default function ErrorApp(props) {
                             })
                             .catch((e) => {
                                 if (props.handleAsyncError) {
+                                    // propagate the error to the error boundary
                                     handleError(e);
                                 } else {
                                     throw e;
