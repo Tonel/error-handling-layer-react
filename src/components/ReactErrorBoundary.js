@@ -6,7 +6,7 @@ export default function ReactErrorBoundary(props) {
             FallbackComponent={ErrorPage}
             onError={(error, errorInfo) => {
                 // log the error
-                console.error(error, errorInfo);
+                console.error("Error caught!", error, errorInfo);
             }}
             onReset={() => {
                 // reloading the page to restore the initial state

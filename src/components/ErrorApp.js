@@ -24,7 +24,8 @@ export default function ErrorApp(props) {
                 >
                     💥 Simulate Error
                 </button>
-                {raiseError ? new Error("") : undefined}
+                {/* "a" is undefined so "props.a.b" will result in an error */}
+                {raiseError ? props.a.b : undefined}
             </div>
             <div>
                 <button

@@ -2,6 +2,11 @@ body {
   background-color: #F8F8F8 !important;
 }
 
+/* To hide the react-error-overlay page */
+body > iframe {
+  display: none;
+}
+
 .container {
   background: #FFFFFF;
   height: 100vh;
