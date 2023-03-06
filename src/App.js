@@ -3,7 +3,7 @@ import { useMemo, useState } from "react";
 import { Select, Switch } from "antd";
 import "bootstrap/dist/css/bootstrap.min.css";
 import ErrorApp from "./components/ErrorApp";
-import ErrorBoundary from "./components/ErrorBoundary";
+import StandardErrorBoundary from "./components/StandardErrorBoundary";
 import ReactErrorBoundary from "./components/ReactErrorBoundary";
 
 function App() {
@@ -29,9 +29,9 @@ function App() {
         if (handleErrors) {
             if (errorHandlingMethod.value === "error-boundary") {
                 return (
-                    <ErrorBoundary>
+                    <StandardErrorBoundary>
                         <ErrorApp />
-                    </ErrorBoundary>
+                    </StandardErrorBoundary>
                 );
             } else if (errorHandlingMethod.value === "react-error-boundary") {
                 return (

@@ -2,13 +2,15 @@
 import React from "react";
 import ErrorPage from "./ErrorPage";
 
-export default class ErrorBoundary extends React.Component {
+export default class StandardErrorBoundary extends React.Component {
     constructor(props) {
         super(props);
 
         // to keep track of when an error occurs
+        // and the error itself
         this.state = {
             hasError: false,
+            error: undefined
         };
     }
 
@@ -17,13 +19,18 @@ export default class ErrorBoundary extends React.Component {
         // specify that the error boundary has caught an error
         return {
             hasError: true,
+            error: error
         };
     }
 
     // defines what to do when an error gets caught
     componentDidCatch(error, errorInfo) {
         // log the error
-        console.error("Error caught!", error, errorInfo);
+        console.log("Error caught!");
+        console.error(error);
+        console.error(errorInfo);
+
+        // record the error in an APM tool...
     }
 
     render() {
